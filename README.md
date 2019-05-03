@@ -36,7 +36,7 @@ start esx_nightclub
 
 Here are examples of what you could add:
 
-**esx_basicneeds\server\main.lua:**
+esx_basicneeds\server\main.lua:
 
 ESX.RegisterUsableItem('icetea', function(source)
 
@@ -63,7 +63,8 @@ ESX.RegisterUsableItem('mixapero', function(source)
     
 end)
 
-**esx_optionalneeds\server\main.lua:
+
+esx_optionalneeds\server\main.lua:
 
 ESX.RegisterUsableItem('tequila', function(source)
 
