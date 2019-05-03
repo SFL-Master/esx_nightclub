@@ -1,20 +1,20 @@
-**fxserver esx_nightclub**
+**FXserver esx_nightclub**
 
-**FXServer ESX NIGHTCLUB JOB**
+FXServer ESX NIGHTCLUB JOB
 
 **[REQUIREMENTS]**
 
     Nightclub Interior (IPL Loader)
-        bob74_ipl   => [](https://github.com/Bob74/bob74_ipl)
+        bob74_ipl   => (https://github.com/Bob74/bob74_ipl)
         
     Player management (billing and boss actions)
-        esx_society => [](https://github.com/ESX-Org/esx_society)
-        esx_billing => [](https://github.com/ESX-Org/esx_billing)
+        esx_society => (https://github.com/ESX-Org/esx_society)
+        esx_billing => (https://github.com/ESX-Org/esx_billing)
 
     Items effects (hunger, thirst, drunk)
-        esx_status => [](https://github.com/ESX-Org/esx_status)
-        esx_basicneeds => [](https://github.com/ESX-Org/esx_basicneeds)
-        esx_optionalsneeds => [](https://github.com/ESX-Org/esx_optionalneeds)
+        esx_status => (https://github.com/ESX-Org/esx_status)
+        esx_basicneeds => (https://github.com/ESX-Org/esx_basicneeds)
+        esx_optionalsneeds => (https://github.com/ESX-Org/esx_optionalneeds)
         Items and effects should be added separately in their appropriate files
         You need to add animations + items effects (basicneeds, optionnalneeds) for an optimal experience
 
@@ -28,6 +28,7 @@
 
 ```
 start esx_nightclub
+
 ```
 
     If you want player management you have to set Config.EnablePlayerManagement to true in config.lua 
