@@ -26,10 +26,7 @@ FXServer ESX NIGHTCLUB JOB
 
     Add this in your server.cfg :
 
-```
 start esx_nightclub
-
-```
 
     If you want player management you have to set Config.EnablePlayerManagement to true in config.lua 
     You can config VaultManagement & Helicopters with true/false (don't forget to comment the area in the same file)
@@ -40,7 +37,7 @@ start esx_nightclub
 Here are examples of what you could add:
 
 **esx_basicneeds\server\main.lua:**
-```
+
 ESX.RegisterUsableItem('icetea', function(source)
 
     local xPlayer = ESX.GetPlayerFromId(source)
@@ -65,10 +62,8 @@ ESX.RegisterUsableItem('mixapero', function(source)
         TriggerClientEvent('esx:showNotification', source, _U('used_mixapero'))
     
 end)
-```
 
-```
-**esx_optionalneeds\server\main.lua:**
+**esx_optionalneeds\server\main.lua:
 
 ESX.RegisterUsableItem('tequila', function(source)
 
@@ -95,7 +90,6 @@ ESX.RegisterUsableItem('jagerbomb', function(source)
     TriggerClientEvent('esx:showNotification', source, _U('used_jagerbomb'))
 
 end)
-```
 
 **[FEATURES]**
 
