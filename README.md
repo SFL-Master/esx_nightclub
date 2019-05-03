@@ -28,7 +28,8 @@ FXServer ESX NIGHTCLUB JOB
 
 start esx_nightclub
 
-    If you want player management you have to set Config.EnablePlayerManagement to true in config.lua You can config VaultManagement & Helicopters with true/false (don't forget to comment the area in the same file)
+    If you want player management you have to set Config.EnablePlayerManagement to true in config.lua 
+    You can config VaultManagement & Helicopters with true/false (don't forget to comment the area in the same file)
 
     If you want real effects, add items and effects in esx_basicneeds and esx_optionalsneeds.
 
