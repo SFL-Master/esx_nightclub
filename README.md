@@ -1,24 +1,24 @@
-fxserver esx_nightclub
+**fxserver esx_nightclub**
 
-FXServer ESX NIGHTCLUB JOB
+**FXServer ESX NIGHTCLUB JOB**
 
-[REQUIREMENTS]
+**[REQUIREMENTS]**
 
     Nightclub Interior (IPL Loader)
-        bob74_ipl   => https://github.com/Bob74/bob74_ipl
+        bob74_ipl   => [](https://github.com/Bob74/bob74_ipl)
         
     Player management (billing and boss actions)
-        esx_society => https://github.com/ESX-Org/esx_society
-        esx_billing => https://github.com/ESX-Org/esx_billing
+        esx_society => [](https://github.com/ESX-Org/esx_society)
+        esx_billing => [](https://github.com/ESX-Org/esx_billing)
 
     Items effects (hunger, thirst, drunk)
-        esx_status => https://github.com/ESX-Org/esx_status
-        esx_basicneeds => https://github.com/ESX-Org/esx_basicneeds
-        esx_optionalsneeds => https://github.com/ESX-Org/esx_optionalneeds
+        esx_status => [](https://github.com/ESX-Org/esx_status)
+        esx_basicneeds => [](https://github.com/ESX-Org/esx_basicneeds)
+        esx_optionalsneeds => [](https://github.com/ESX-Org/esx_optionalneeds)
         Items and effects should be added separately in their appropriate files
         You need to add animations + items effects (basicneeds, optionnalneeds) for an optimal experience
 
-[INSTALLATION]
+**[INSTALLATION]**
 
     CD in your resources/[esx] folder
 
@@ -26,17 +26,20 @@ FXServer ESX NIGHTCLUB JOB
 
     Add this in your server.cfg :
 
+```
 start esx_nightclub
+```
 
     If you want player management you have to set Config.EnablePlayerManagement to true in config.lua 
     You can config VaultManagement & Helicopters with true/false (don't forget to comment the area in the same file)
 
     If you want real effects, add items and effects in esx_basicneeds and esx_optionalsneeds.
 
+
 Here are examples of what you could add:
 
-esx_basicneeds\server\main.lua:
-
+**esx_basicneeds\server\main.lua:**
+```
 ESX.RegisterUsableItem('icetea', function(source)
 
     local xPlayer = ESX.GetPlayerFromId(source)
@@ -61,8 +64,10 @@ ESX.RegisterUsableItem('mixapero', function(source)
         TriggerClientEvent('esx:showNotification', source, _U('used_mixapero'))
     
 end)
+```
 
-esx_optionalneeds\server\main.lua:
+```
+**esx_optionalneeds\server\main.lua:**
 
 ESX.RegisterUsableItem('tequila', function(source)
 
@@ -89,8 +94,9 @@ ESX.RegisterUsableItem('jagerbomb', function(source)
     TriggerClientEvent('esx:showNotification', source, _U('used_jagerbomb'))
 
 end)
+```
 
-[FEATURES]
+**[FEATURES]**
 
     Nightclub job
         Fully customizable job
@@ -107,7 +113,7 @@ end)
         working LCD Screens
      
 
-[SHOPS (HARVESTING) AREAS]
+**[SHOPS (HARVESTING) AREAS]**
 
     Alcoholic drinks => In the Nightclub
     Non-alcoholic drinks => In the Nightclub
