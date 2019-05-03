@@ -13,7 +13,7 @@ Config.MissCraft                  = 10 -- %
 
 
 Config.AuthorizedVehicles = {
-    { name = 'rentalbus',  label = 'Vanilla Unicorn Bus' },
+        { name = 'rentalbus',  label = 'Vanilla Unicorn Bus' },
 	{ name = 'pbus2',  label = 'Festival Bus' },
 	{ name = 'jester3',  label = 'Jester Classic' },
 	{ name = 'patriot2',  label = 'Patriot Stretch-Limo' },
