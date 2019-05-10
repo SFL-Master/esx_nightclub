@@ -107,7 +107,7 @@ Locales['de'] = {
     ['craft']                    = 'Vollständiges Mischen von ~g~',
   
     -- Misc  
-    ['map_blip']                 = 'Nachtclubmitarbeiter',
+    ['map_blip']                 = 'Nachtclub',
     ['nightclub']                = 'Nachtclub',
   
     -- Phone  
