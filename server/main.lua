@@ -10,8 +10,8 @@ TriggerEvent('esx_society:registerSociety', 'nightclub', 'Nightclub', 'society_n
 
 
 
-RegisterServerEvent('esx_nightclubjob:getStockItem')
-AddEventHandler('esx_nightclubjob:getStockItem', function(itemName, count)
+RegisterServerEvent('esx_nightclub:getStockItem')
+AddEventHandler('esx_nightclub:getStockItem', function(itemName, count)
 
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
@@ -38,7 +38,7 @@ AddEventHandler('esx_nightclubjob:getStockItem', function(itemName, count)
 
 end)
 
-ESX.RegisterServerCallback('esx_nightclubjob:getStockItems', function(source, cb)
+ESX.RegisterServerCallback('esx_nightclub:getStockItems', function(source, cb)
 
   TriggerEvent('esx_addoninventory:getSharedInventory', 'society_nightclub', function(inventory)
     cb(inventory.items)
@@ -46,8 +46,8 @@ ESX.RegisterServerCallback('esx_nightclubjob:getStockItems', function(source, cb
 
 end)
 
-RegisterServerEvent('esx_nightclubjob:putStockItems')
-AddEventHandler('esx_nightclubjob:putStockItems', function(itemName, count)
+RegisterServerEvent('esx_nightclub:putStockItems')
+AddEventHandler('esx_nightclub:putStockItems', function(itemName, count)
 
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
@@ -71,8 +71,8 @@ AddEventHandler('esx_nightclubjob:putStockItems', function(itemName, count)
 end)
 
 
-RegisterServerEvent('esx_nightclubjob:getFridgeStockItem')
-AddEventHandler('esx_nightclubjob:getFridgeStockItem', function(itemName, count)
+RegisterServerEvent('esx_nightclub:getFridgeStockItem')
+AddEventHandler('esx_nightclub:getFridgeStockItem', function(itemName, count)
 
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
@@ -99,7 +99,7 @@ AddEventHandler('esx_nightclubjob:getFridgeStockItem', function(itemName, count)
 
 end)
 
-ESX.RegisterServerCallback('esx_nightclubjob:getFridgeStockItems', function(source, cb)
+ESX.RegisterServerCallback('esx_nightclub:getFridgeStockItems', function(source, cb)
 
   TriggerEvent('esx_addoninventory:getSharedInventory', 'society_nightclub_fridge', function(inventory)
     cb(inventory.items)
@@ -107,8 +107,8 @@ ESX.RegisterServerCallback('esx_nightclubjob:getFridgeStockItems', function(sour
 
 end)
 
-RegisterServerEvent('esx_nightclubjob:putFridgeStockItems')
-AddEventHandler('esx_nightclubjob:putFridgeStockItems', function(itemName, count)
+RegisterServerEvent('esx_nightclub:putFridgeStockItems')
+AddEventHandler('esx_nightclub:putFridgeStockItems', function(itemName, count)
 
   local _source = source
   local xPlayer = ESX.GetPlayerFromId(_source)
@@ -132,8 +132,8 @@ AddEventHandler('esx_nightclubjob:putFridgeStockItems', function(itemName, count
 end)
 
 
-RegisterServerEvent('esx_nightclubjob:buyItem')
-AddEventHandler('esx_nightclubjob:buyItem', function(itemName, price, itemLabel)
+RegisterServerEvent('esx_nightclub:buyItem')
+AddEventHandler('esx_nightclub:buyItem', function(itemName, price, itemLabel)
 
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
@@ -160,8 +160,8 @@ AddEventHandler('esx_nightclubjob:buyItem', function(itemName, price, itemLabel)
 end)
 
 
-RegisterServerEvent('esx_nightclubjob:craftingCoktails')
-AddEventHandler('esx_nightclubjob:craftingCoktails', function(itemValue)
+RegisterServerEvent('esx_nightclub:craftingCoktails')
+AddEventHandler('esx_nightclub:craftingCoktails', function(itemValue)
 
     local _source = source
     local _itemValue = itemValue
@@ -573,7 +573,7 @@ AddEventHandler('esx_nightclubjob:craftingCoktails', function(itemValue)
 end)
 
 
-ESX.RegisterServerCallback('esx_nightclubjob:getVaultWeapons', function(source, cb)
+ESX.RegisterServerCallback('esx_nightclub:getVaultWeapons', function(source, cb)
 
   TriggerEvent('esx_datastore:getSharedDataStore', 'society_nightclub', function(store)
 
@@ -589,7 +589,7 @@ ESX.RegisterServerCallback('esx_nightclubjob:getVaultWeapons', function(source, 
 
 end)
 
-ESX.RegisterServerCallback('esx_nightclubjob:addVaultWeapon', function(source, cb, weaponName)
+ESX.RegisterServerCallback('esx_nightclub:addVaultWeapon', function(source, cb, weaponName)
 
   local _source = source
   local xPlayer = ESX.GetPlayerFromId(_source)
@@ -628,7 +628,7 @@ ESX.RegisterServerCallback('esx_nightclubjob:addVaultWeapon', function(source, c
 
 end)
 
-ESX.RegisterServerCallback('esx_nightclubjob:removeVaultWeapon', function(source, cb, weaponName)
+ESX.RegisterServerCallback('esx_nightclub:removeVaultWeapon', function(source, cb, weaponName)
 
   local _source = source
   local xPlayer = ESX.GetPlayerFromId(_source)
@@ -667,7 +667,7 @@ ESX.RegisterServerCallback('esx_nightclubjob:removeVaultWeapon', function(source
 
 end)
 
-ESX.RegisterServerCallback('esx_nightclubjob:getPlayerInventory', function(source, cb)
+ESX.RegisterServerCallback('esx_nightclub:getPlayerInventory', function(source, cb)
 
   local _source = source
   local xPlayer = ESX.GetPlayerFromId(_source)
