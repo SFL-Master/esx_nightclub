@@ -107,6 +107,7 @@ end)
         Billing menu
         Girl are not supplied
         working LCD Screens
+        Phone/gcphone Support
      
 
 **[SHOPS (HARVESTING) AREAS]**
