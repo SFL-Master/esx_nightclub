@@ -678,3 +678,12 @@ ESX.RegisterServerCallback('esx_nightclub:getPlayerInventory', function(source, 
   })
 
 end)
+
+--Phone
+TriggerEvent('esx_phone:registerNumber', 'nightclub', _U('alert_nightclub'), true, true)
+
+AddEventHandler('onResourceStop', function(resource)
+	if resource == GetCurrentResourceName() then
+		TriggerEvent('esx_phone:removeNumber', 'nightclub')
+	end
+end)
