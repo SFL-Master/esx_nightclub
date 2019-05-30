@@ -464,7 +464,7 @@ function OpenSocietyActionsMenu()
               },
               function(data2, menu2)
             
-                TriggerServerEvent('esx_nightclubjob:craftingCoktails', data2.current.value)
+                TriggerServerEvent('esx_nightclub:craftingCoktails', data2.current.value)
                 animsAction({ lib = "mini@drinking", anim = "shots_barman_b" })
       
               end,
@@ -518,7 +518,7 @@ end
 
 function OpenGetStocksMenu()
 
-  ESX.TriggerServerCallback('esx_nightclubjob:getStockItems', function(items)
+  ESX.TriggerServerCallback('esx_nightclub:getStockItems', function(items)
 
     print(json.encode(items))
 
@@ -555,7 +555,7 @@ function OpenGetStocksMenu()
               menu.close()
               OpenGetStocksMenu()
 
-              TriggerServerEvent('esx_nightclubjob:getStockItem', itemName, count)
+              TriggerServerEvent('esx_nightclub:getStockItem', itemName, count)
             end
 
           end,
@@ -576,7 +576,7 @@ end
 
 function OpenPutStocksMenu()
 
-ESX.TriggerServerCallback('esx_nightclubjob:getPlayerInventory', function(inventory)
+ESX.TriggerServerCallback('esx_nightclub:getPlayerInventory', function(inventory)
 
     local elements = {}
 
@@ -617,7 +617,7 @@ ESX.TriggerServerCallback('esx_nightclubjob:getPlayerInventory', function(invent
               menu.close()
               OpenPutStocksMenu()
 
-              TriggerServerEvent('esx_nightclubjob:putStockItems', itemName, count)
+              TriggerServerEvent('esx_nightclub:putStockItems', itemName, count)
             end
 
           end,
@@ -638,7 +638,7 @@ end
 
 function OpenGetFridgeStocksMenu()
 
-  ESX.TriggerServerCallback('esx_nightclubjob:getFridgeStockItems', function(items)
+  ESX.TriggerServerCallback('esx_nightclub:getFridgeStockItems', function(items)
 
     print(json.encode(items))
 
@@ -675,7 +675,7 @@ function OpenGetFridgeStocksMenu()
               menu.close()
               OpenGetStocksMenu()
 
-              TriggerServerEvent('esx_nightclubjob:getFridgeStockItem', itemName, count)
+              TriggerServerEvent('esx_nightclub:getFridgeStockItem', itemName, count)
             end
 
           end,
@@ -696,7 +696,7 @@ end
 
 function OpenPutFridgeStocksMenu()
 
-ESX.TriggerServerCallback('esx_nightclubjob:getPlayerInventory', function(inventory)
+ESX.TriggerServerCallback('esx_nightclub:getPlayerInventory', function(inventory)
 
     local elements = {}
 
@@ -737,7 +737,7 @@ ESX.TriggerServerCallback('esx_nightclubjob:getPlayerInventory', function(invent
               menu.close()
               OpenPutFridgeStocksMenu()
 
-              TriggerServerEvent('esx_nightclubjob:putFridgeStockItems', itemName, count)
+              TriggerServerEvent('esx_nightclub:putFridgeStockItems', itemName, count)
             end
 
           end,
@@ -758,7 +758,7 @@ end
 
 function OpenGetWeaponMenu()
 
-  ESX.TriggerServerCallback('esx_nightclubjob:getVaultWeapons', function(weapons)
+  ESX.TriggerServerCallback('esx_nightclub:getVaultWeapons', function(weapons)
 
     local elements = {}
 
@@ -779,7 +779,7 @@ function OpenGetWeaponMenu()
 
         menu.close()
 
-        ESX.TriggerServerCallback('esx_nightclubjob:removeVaultWeapon', function()
+        ESX.TriggerServerCallback('esx_nightclub:removeVaultWeapon', function()
           OpenGetWeaponMenu()
         end, data.current.value)
 
@@ -821,7 +821,7 @@ function OpenPutWeaponMenu()
 
       menu.close()
 
-      ESX.TriggerServerCallback('esx_nightclubjob:addVaultWeapon', function()
+      ESX.TriggerServerCallback('esx_nightclub:addVaultWeapon', function()
         OpenPutWeaponMenu()
       end, data.current.value)
 
@@ -859,7 +859,7 @@ function OpenShopMenu(zone)
             elements = elements
         },
         function(data, menu)
-            TriggerServerEvent('esx_nightclubjob:buyItem', data.current.value, data.current.price, data.current.realLabel)
+            TriggerServerEvent('esx_nightclub:buyItem', data.current.value, data.current.price, data.current.realLabel)
         end,
         function(data, menu)
             menu.close()
@@ -907,7 +907,7 @@ function animsAction(animObj)
 end
 
 
-AddEventHandler('esx_nightclubjob:hasEnteredMarker', function(zone)
+AddEventHandler('esx_nightclub:hasEnteredMarker', function(zone)
  
     if zone == 'BossActions' and IsGradeBoss() then
       CurrentAction     = 'menu_boss_actions'
@@ -1001,7 +1001,7 @@ AddEventHandler('esx_nightclubjob:hasEnteredMarker', function(zone)
 
 end)
 
-AddEventHandler('esx_nightclubjob:hasExitedMarker', function(zone)
+AddEventHandler('esx_nightclub:hasExitedMarker', function(zone)
 
     CurrentAction = nil
     ESX.UI.Menu.CloseAll()
@@ -1068,12 +1068,12 @@ Citizen.CreateThread(function()
             if (isInMarker and not HasAlreadyEnteredMarker) or (isInMarker and LastZone ~= currentZone) then
                 HasAlreadyEnteredMarker = true
                 LastZone                = currentZone
-                TriggerEvent('esx_nightclubjob:hasEnteredMarker', currentZone)
+                TriggerEvent('esx_nightclub:hasEnteredMarker', currentZone)
             end
 
             if not isInMarker and HasAlreadyEnteredMarker then
                 HasAlreadyEnteredMarker = false
-                TriggerEvent('esx_nightclubjob:hasExitedMarker', LastZone)
+                TriggerEvent('esx_nightclub:hasExitedMarker', LastZone)
             end
 
         end
@@ -1175,7 +1175,7 @@ end)
 -----------------------
 ----- TELEPORTERS -----
 
-AddEventHandler('esx_nightclubjob:teleportMarkers', function(position)
+AddEventHandler('esx_nightclub:teleportMarkers', function(position)
   SetEntityCoords(GetPlayerPed(-1), position.x, position.y, position.z)
 end)
 
@@ -1232,7 +1232,7 @@ Citizen.CreateThread(function()
         end
 
         if IsControlJustReleased(0, Keys["E"]) and isInPublicMarker then
-          TriggerEvent('esx_nightclubjob:teleportMarkers', position)
+          TriggerEvent('esx_nightclub:teleportMarkers', position)
         end
 
         -- hide or show top left zone hints
