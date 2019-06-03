@@ -28,11 +28,11 @@ Locales['en'] = {
     ['put_object']               = 'Put object',
     ['fridge']                   = 'Fridge',
     ['open_fridge']              = 'Press ~INPUT_CONTEXT~ to access the fridge',
-    ['unicorn_fridge_stock']     = 'Fridge of the Vanilla Unicorn',
+    ['nightclub_fridge_stock']   = 'Fridge of the Nightclub',
     ['fridge_inventory']         = 'Content of the fridge',
   
     -- Shops  
-    ['shop']                     = 'Vanilla Unicorn Shop',
+    ['shop']                     = 'Nightclub Shop',
     ['shop_menu']                = 'Press ~INPUT_CONTEXT~ to access the shop.',
     ['bought']                   = 'You bought ~b~ 1x',
     ['not_enough_money']         = 'You do not have enough money.',
@@ -58,7 +58,7 @@ Locales['en'] = {
     ['you_added']                = 'You added x',
     ['quantity']                 = 'Amount',
     ['inventory']                = 'Inventory',
-    ['unicorn_stock']            = 'Stock of Vanilla Unicorn',
+    ['nightclub_stock']          = 'Stock from the Nightclub',
   
     -- Billing Menu  
     ['billing']                  = 'Bill',
@@ -107,12 +107,12 @@ Locales['en'] = {
     ['craft']                    = 'Complete mixing of ~g~',
   
     -- Misc  
-    ['map_blip']                 = 'Vanilla Unicorn',
-    ['unicorn']                  = 'Vanilla Unicorn',
+    ['map_blip']                 = 'Nightclub',
+    ['nightclub']                = 'Nightclub',
   
     -- Phone  
-    ['unicorn_phone']            = 'Unicorn',
-    ['unicorn_customer']         = 'Citizen',
+    ['nightclub_phone']            = 'Nightclub',
+    ['nightclub_customer']         = 'Citizen',
   
     -- Teleporters
     ['e_to_enter_1']             = 'Press ~INPUT_PICKUP~ to go behind the bar',
@@ -120,5 +120,4 @@ Locales['en'] = {
     ['e_to_enter_2']             = 'Press ~INPUT_PICKUP~ to go up to the roof.',
     ['e_to_exit_2']              = 'Press ~INPUT_PICKUP~ to go down to the offices.',
     
-  }
-  
+}
